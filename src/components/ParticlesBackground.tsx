@@ -12,7 +12,7 @@ export function ParticlesBackground() {
     <Particles
       id="tsparticles"
       init={init}
-      className="absolute inset-0 -z-10"
+      className="fixed inset-0 -z-10 pointer-events-none"
       options={{
         fullScreen: { enable: false },
         background: { color: { value: "transparent" } },
@@ -37,13 +37,13 @@ export function ParticlesBackground() {
           },
           move: {
             enable: true,
-            speed: 0.8,
+            speed: 0.6,
             direction: "none",
             outModes: { default: "bounce" },
             random: true,
           },
-          number: { density: { enable: true, area: 900 }, value: 70 },
-          opacity: { value: 0.5 },
+          number: { density: { enable: true, area: 900 }, value: 80 },
+          opacity: { value: 0.45 },
           shape: { type: "circle" },
           size: { value: { min: 1, max: 3 } },
         },
