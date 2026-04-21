@@ -84,8 +84,8 @@ export function Contact() {
 
             <div className="flex gap-3 pt-2">
               {[
-                { icon: Github, href: "https://github.com", label: "GitHub" },
-                { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+                { icon: Github, href: "https://github.com/Ragul8080", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/connectragulravi", label: "LinkedIn" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
