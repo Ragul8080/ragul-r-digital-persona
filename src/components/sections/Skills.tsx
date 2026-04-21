@@ -9,14 +9,12 @@ import {
   SiJavascript,
   SiJquery,
   SiBootstrap,
-  SiOpenai,
-} from "react-icons/si";
-import { FaAws } from "react-icons/fa";
   SiGit,
   SiGithub,
   SiJira,
   SiOpenai,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { Database, Cloud, Wrench, Sparkles, Code2, Globe } from "lucide-react";
 import type { ComponentType } from "react";
 
@@ -61,7 +59,7 @@ const groups: {
   {
     title: "Cloud",
     icon: Cloud,
-    skills: [{ name: "AWS", icon: SiAmazonec2, color: "#FF9900" }],
+    skills: [{ name: "AWS", icon: FaAws, color: "#FF9900" }],
   },
   {
     title: "Tools",
