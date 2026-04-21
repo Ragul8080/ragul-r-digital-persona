@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, Github, Linkedin, ChevronDown } from "lucide-react";
-import { ParticlesBackground } from "./ParticlesBackground";
-import { TypingText } from "./TypingText";
+import { ParticlesBackground } from "@/components/ParticlesBackground";
+import { TypingText } from "@/components/TypingText";
 import profileImg from "@/assets/ragul-profile.jpg";
 
 export function Hero() {

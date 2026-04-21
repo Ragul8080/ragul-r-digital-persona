@@ -5,11 +5,11 @@ import {
   SiSharp,
   SiPostgresql,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiJavascript,
   SiJquery,
   SiBootstrap,
-  SiAmazon,
+  SiAmazonwebservices,
   SiGit,
   SiGithub,
   SiJira,
@@ -18,7 +18,11 @@ import {
 import { Database, Cloud, Wrench, Sparkles, Code2, Globe } from "lucide-react";
 import type { ComponentType } from "react";
 
-type Skill = { name: string; icon: ComponentType<{ className?: string }>; color: string };
+type Skill = {
+  name: string;
+  icon: ComponentType<{ className?: string; style?: React.CSSProperties }>;
+  color: string;
+};
 
 const groups: {
   title: string;
@@ -46,7 +50,7 @@ const groups: {
     icon: Globe,
     skills: [
       { name: "HTML", icon: SiHtml5, color: "#E34F26" },
-      { name: "CSS", icon: SiCss3, color: "#1572B6" },
+      { name: "CSS", icon: SiCss, color: "#1572B6" },
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
       { name: "jQuery", icon: SiJquery, color: "#0769AD" },
       { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
@@ -55,7 +59,7 @@ const groups: {
   {
     title: "Cloud",
     icon: Cloud,
-    skills: [{ name: "AWS", icon: SiAmazon, color: "#FF9900" }],
+    skills: [{ name: "AWS", icon: SiAmazonwebservices, color: "#FF9900" }],
   },
   {
     title: "Tools",
