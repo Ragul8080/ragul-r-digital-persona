@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, Github, Linkedin, ChevronDown } from "lucide-react";
-import { ParticlesBackground } from "@/components/ParticlesBackground";
 import { TypingText } from "@/components/TypingText";
 import profileImg from "@/assets/ragul-profile.jpg";
 
@@ -10,7 +9,6 @@ export function Hero() {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16"
     >
-      <ParticlesBackground />
       <div className="absolute inset-0 bg-gradient-radial pointer-events-none" />
       <div className="absolute top-1/4 -left-32 size-96 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 size-96 rounded-full bg-accent/20 blur-3xl pointer-events-none" />
@@ -112,7 +110,7 @@ export function Hero() {
                   alt="Ragul R - Software Developer"
                   width={768}
                   height={768}
-                  className="size-full object-cover"
+                  className="size-full object-cover object-top scale-90"
                 />
               </div>
             </div>

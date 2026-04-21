@@ -8,6 +8,7 @@ import { Education } from "@/components/sections/Education";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { ParticlesBackground } from "@/components/ParticlesBackground";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,8 +34,9 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative min-h-screen bg-background">
+      <ParticlesBackground />
       <Navbar />
-      <main>
+      <main className="relative">
         <Hero />
         <About />
         <Skills />
