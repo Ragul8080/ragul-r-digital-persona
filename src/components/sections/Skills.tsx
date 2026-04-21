@@ -9,7 +9,7 @@ import {
   SiJavascript,
   SiJquery,
   SiBootstrap,
-  SiAmazonwebservices,
+  SiAmazonec2,
   SiGit,
   SiGithub,
   SiJira,
@@ -59,7 +59,7 @@ const groups: {
   {
     title: "Cloud",
     icon: Cloud,
-    skills: [{ name: "AWS", icon: SiAmazonwebservices, color: "#FF9900" }],
+    skills: [{ name: "AWS", icon: SiAmazonec2, color: "#FF9900" }],
   },
   {
     title: "Tools",
