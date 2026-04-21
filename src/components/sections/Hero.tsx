@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, Github, Linkedin, ChevronDown } from "lucide-react";
 import { ParticlesBackground } from "@/components/ParticlesBackground";
 import { TypingText } from "@/components/TypingText";
-import profileImg from "@/assets/ragul-profile.jpg";
+import profileImg from "@/assets/hero.png";
 
 export function Hero() {
   return (
@@ -43,19 +43,20 @@ export function Hero() {
               />
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Building scalable and efficient web applications with clean,
-              maintainable code and a passion for elegant solutions.
+              I build production-grade web applications with .NET and modern frontend
+              technologies, turning business goals into fast, reliable, and polished
+              digital experiences.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-            <a
+            {/*<a
               href="#projects"
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-primary text-primary-foreground font-medium hover:scale-105 transition-all shadow-glow"
             >
               View Projects
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </a>*/}
             <a
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass font-medium hover:bg-secondary transition-all hover:scale-105"

@@ -25,20 +25,44 @@ const contactInfo = [
 export function Contact() {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const sheetWebhookUrl = import.meta.env.VITE_GOOGLE_SHEET_WEBHOOK_URL as string | undefined;
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(form);
     if (!result.success) {
       toast.error(result.error.issues[0].message);
       return;
     }
+
+    if (!sheetWebhookUrl) {
+      toast.error("Contact endpoint is missing. Add VITE_GOOGLE_SHEET_WEBHOOK_URL.");
+      return;
+    }
+
     setLoading(true);
-    setTimeout(() => {
+
+    try {
+      const response = await fetch(sheetWebhookUrl, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify({
+          ...result.data,
+          source: "portfolio-contact-form",
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+
+      // no-cors returns an opaque response; reaching here means request was sent.
+      if (response) {
+        setForm({ name: "", email: "", message: "" });
+        toast.success("Message sent successfully. I will get back to you soon.");
+      }
+    } catch {
+      toast.error("Unable to send right now. Please try again in a moment.");
+    } finally {
       setLoading(false);
-      setForm({ name: "", email: "", message: "" });
-      toast.success("Message sent! I'll get back to you soon.");
-    }, 1100);
+    }
   };
 
   return (

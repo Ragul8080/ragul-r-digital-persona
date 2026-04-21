@@ -16,13 +16,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Ragul R, a results-driven software developer building scalable, efficient web applications with .NET, C#, and modern web technologies.",
+          "Portfolio of Ragul R, software developer crafting high-performance .NET and full-stack web applications focused on reliability, scalability, and user-first product outcomes.",
       },
       { property: "og:title", content: "Ragul R — Software Developer" },
       {
         property: "og:description",
         content:
-          "Building scalable and efficient web applications with clean, maintainable code.",
+          "High-impact .NET and full-stack engineering portfolio with a focus on performance, clean architecture, and business results.",
       },
       { property: "og:type", content: "website" },
     ],

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Brain, Users, BookOpen, Code2 } from "lucide-react";
-import profileImg from "@/assets/ragul-profile.jpg";
+import profileImg from "@/assets/ragul-about-photo.png";
 
 const strengths = [
   {
@@ -25,12 +25,19 @@ const strengths = [
   },
 ];
 
+const quickFacts = [
+  { label: "Role", value: "Software Developer" },
+  { label: "Focus", value: "Full-Stack .NET Apps" },
+  { label: "Location", value: "Tamil Nadu, India" },
+  { label: "Mindset", value: "Performance + UX First" },
+];
+
 export function About() {
   return (
     <section id="about" className="relative py-28 overflow-hidden">
       <div className="absolute top-1/2 -left-40 size-80 rounded-full bg-primary/10 blur-3xl" />
       <div className="container mx-auto px-6">
-        <SectionHeader eyebrow="About me" title="Crafting code with purpose" />
+        <SectionHeader eyebrow="About me" title="Engineering digital experiences that perform" />
 
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           <motion.div
@@ -51,8 +58,8 @@ export function About() {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 glass-strong rounded-2xl p-4 shadow-card hidden md:block">
-                <p className="font-mono text-xs text-muted-foreground">Based in</p>
-                <p className="font-display font-semibold">Tamil Nadu, India</p>
+                <p className="font-mono text-xs text-muted-foreground">Currently</p>
+                <p className="font-display font-semibold">Open for impactful roles</p>
               </div>
             </div>
           </motion.div>
@@ -65,17 +72,28 @@ export function About() {
             className="lg:col-span-3 space-y-8"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a <span className="text-foreground font-semibold">results-driven software developer</span>{" "}
-              with experience in building and enhancing web applications. I focus on
-              delivering efficient, reliable solutions through{" "}
-              <span className="text-primary-glow font-semibold">clean, maintainable code</span>.
+              I am <span className="text-foreground font-semibold">Ragul R, a results-focused software developer</span>{" "}
+              building web products that are stable, scalable, and delightful to use.
+              My work blends strong engineering fundamentals with practical product
+              thinking so each release creates measurable value.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Currently working at ValleyPoint Technologies, I collaborate in agile
-              teams to ship features that improve performance and elevate user
-              experience. I believe great software comes from curiosity, craft, and
-              a relentless focus on the user.
+              At ValleyPoint Technologies, I collaborate with cross-functional teams to
+              design, build, and ship features across the .NET and modern web stack. I
+              care deeply about code quality, performance tuning, and creating user
+              experiences that feel fast, clear, and trustworthy.
             </p>
+
+            <div className="grid sm:grid-cols-2 gap-3">
+              {quickFacts.map((fact) => (
+                <div key={fact.label} className="rounded-xl border border-border/60 bg-surface/70 px-4 py-3">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+                    {fact.label}
+                  </p>
+                  <p className="mt-1 font-medium text-sm">{fact.value}</p>
+                </div>
+              ))}
+            </div>
 
             <div className="grid sm:grid-cols-2 gap-4 pt-4">
               {strengths.map((s, i) => (
