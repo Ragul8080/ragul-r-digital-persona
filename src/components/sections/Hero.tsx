@@ -64,8 +64,9 @@ export function Hero() {
               Contact Me
             </a>
             <a
-              href="/resume.pdf"
-              download
+              href="https://drive.google.com/uc?export=download&id=12mWlAqAtGrP-fCqt8vhAayNvQ1jq-jCP"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border font-medium hover:bg-secondary transition-all hover:scale-105"
             >
               <Download className="size-4" />
@@ -75,8 +76,8 @@ export function Hero() {
 
           <div className="flex items-center justify-center lg:justify-start gap-3 pt-2">
             {[
-              { icon: Github, href: "https://github.com", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+              { icon: Github, href: "https://github.com/Ragul8080", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/connectragulravi", label: "LinkedIn" },
               { icon: Mail, href: "mailto:connect.ragulravi@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a
