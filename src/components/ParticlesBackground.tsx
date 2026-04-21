@@ -3,6 +3,9 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import type { Engine } from "tsparticles-engine";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type _EnsureEngine = Engine;
+
 export function ParticlesBackground() {
   const init = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
