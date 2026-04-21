@@ -112,7 +112,7 @@ export function Hero() {
                   alt="Ragul R - Software Developer"
                   width={768}
                   height={768}
-                  className="size-full object-cover"
+                  className="size-full object-cover object-top scale-90"
                 />
               </div>
             </div>
