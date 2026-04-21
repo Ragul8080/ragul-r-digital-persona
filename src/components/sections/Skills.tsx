@@ -9,7 +9,9 @@ import {
   SiJavascript,
   SiJquery,
   SiBootstrap,
-  SiAmazonec2,
+  SiOpenai,
+} from "react-icons/si";
+import { FaAws } from "react-icons/fa";
   SiGit,
   SiGithub,
   SiJira,
