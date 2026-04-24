@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { z } from "zod";
-import { Mail, Phone, MapPin, Github, Linkedin, Send, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Send, Loader2, MessageCircle } from "lucide-react";
 import { SectionHeader } from "./About";
 import { toast } from "sonner";
 
@@ -21,6 +21,10 @@ const contactInfo = [
   { icon: Phone, label: "Phone", value: "+91 6374166035", href: "tel:+916374166035" },
   { icon: MapPin, label: "Location", value: "Tamil Nadu, India" },
 ];
+
+const whatsappNumber = "916374166035";
+const whatsappMessage = "Hi Ragul, I saw your portfolio and would like to connect.";
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 export function Contact() {
   const [loading, setLoading] = useState(false);
@@ -123,6 +127,29 @@ export function Contact() {
                 </a>
               ))}
             </div>
+
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+              className="block rounded-2xl bg-[#25D366]/15 border border-[#25D366]/35 p-5 hover:bg-[#25D366]/25 transition-all hover:-translate-y-1 shadow-card"
+            >
+              <div className="flex items-start gap-4">
+                <div className="size-10 shrink-0 rounded-xl bg-[#25D366] flex items-center justify-center">
+                  <MessageCircle className="size-5 text-black" />
+                </div>
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-wider text-[#8EF9AF]">
+                    WhatsApp
+                  </p>
+                  <p className="font-medium">Direct message me instantly</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Tap to open chat with a pre-filled message.
+                  </p>
+                </div>
+              </div>
+            </a>
           </motion.div>
 
           <motion.form
